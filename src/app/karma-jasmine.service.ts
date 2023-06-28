@@ -65,12 +65,37 @@ export class KarmaJasmineService {
     return a > 0 === true;
   }
 
-  elementosArray(array: any[] ): number {
+  elementosArray(array: any[]): number {
     return array.length;
   }
 
-  comprobarSub(cadena:string, subcadena:string): boolean{
+  comprobarSub(cadena: string, subcadena: string): boolean {
     return cadena.includes(subcadena);
+  }
+
+  obtenerPromedio(array: number[]): number {
+    let suma = 0;
+    for (let i = 0; i < array.length; i++) {
+      suma += array[i];
+    }
+    const promedio = suma / array.length;
+    return promedio;
+  }
+  /*
+  stringToChars(arrayStr: string[]): string[] {
+    const arrayChar = arrayStr.split(',')
+  return 
+  }*/
+
+  sumaDigitos(a: number): number {
+    let suma = 0;
+    const numeroToString = a.toString();
+
+    for (let i = 0; i < numeroToString.length; i++) {
+      const digito = parseInt(numeroToString.charAt(i), 10);
+      suma += digito;
+    }
+    return suma;
   }
 }
 

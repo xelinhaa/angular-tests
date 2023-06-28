@@ -156,11 +156,32 @@ describe('KarmaJasmineService', () => {
     expect(resultado2).toBe(true);
   });
 
-  it('comprobar si una subcadena no pertenece a una cadena', ()=>{
-    const resultado= service.comprobarSub('hola qué hase?', 'ventana');
+  it('comprobar si una subcadena no pertenece a una cadena', () => {
+    const resultado = service.comprobarSub('hola qué hase?', 'ventana');
     const resultado2 = service.comprobarSub('una sombrilla azul', 'bronceador');
     expect(resultado).toBe(false);
     expect(resultado2).toBe(false);
   });
+
+  it('comprobar si calcula el promedio de un array de números', () => {
+    const resultado = service.obtenerPromedio([2, 5, 14, 7, 9, 2]);
+    const resultado2 = service.obtenerPromedio([-5, 6, 18, -2, 3]);
+    expect(resultado).toBe(6.5);
+    expect(resultado2).toBe(4);
+  });
+
+  /*
+  it('comprueba si convierte un array de strings a caracteres', () => {
+    const resultado = service.stringToChars();
+    expect(resultado).toBe()
+  })
+  */
+
+  it('comprobar si calcula la suma de dígitos', () => {
+    const resultado = service.sumaDigitos(458);
+    expect(resultado).toBe(17);
+  })
+
+
 
 });
