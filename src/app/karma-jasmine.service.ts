@@ -56,11 +56,23 @@ export class KarmaJasmineService {
     for (var i = 2; i * i <= a; i++) {
       if (a % i === 0) {
         return false;
-      } 
-    }
-        return true;
       }
     }
+    return true;
+  }
+
+  comprobarPositivo(a: number): boolean {
+    return a > 0 === true;
+  }
+
+  elementosArray(array: any[] ): number {
+    return array.length;
+  }
+
+  comprobarSub(cadena:string, subcadena:string): boolean{
+    return cadena.includes(subcadena);
+  }
+}
 
 
 

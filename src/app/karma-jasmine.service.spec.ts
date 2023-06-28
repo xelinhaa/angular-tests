@@ -126,6 +126,41 @@ describe('KarmaJasmineService', () => {
     const resultado2 = service.comprobarPrimo(15);
     expect(resultado).toBe(false);
     expect(resultado2).toBe(false);
-  })
+  });
+
+  it('comprobar si un número es positivo', () => {
+    const resultado = service.comprobarPositivo(9);
+    const resultado2 = service.comprobarPositivo(14);
+    expect(resultado).toBe(true);
+    expect(resultado2).toBe(true);
+  });
+
+  it('comprobar si un númerono es negativo', () => {
+    const resultado = service.comprobarPositivo(-5);
+    const resultado2 = service.comprobarPositivo(-24);
+    expect(resultado).toBe(false);
+    expect(resultado2).toBe(false);
+  });
+
+  it('calcular número de elementos de un array', () => {
+    const resultado = service.elementosArray(['hasta', 'luego', 'lucas']);
+    const resultado2 = service.elementosArray([1, 2, 3, 4, 5, 6]);
+    expect(resultado).toEqual(3);
+    expect(resultado2).toEqual(6);
+  });
+
+  it('comprobar si una subcadena pertenece a una cadena', () => {
+    const resultado = service.comprobarSub('hola qué hase?', 'hola');
+    const resultado2 = service.comprobarSub('una sombrilla azul', 'azul');
+    expect(resultado).toBe(true);
+    expect(resultado2).toBe(true);
+  });
+
+  it('comprobar si una subcadena no pertenece a una cadena', ()=>{
+    const resultado= service.comprobarSub('hola qué hase?', 'ventana');
+    const resultado2 = service.comprobarSub('una sombrilla azul', 'bronceador');
+    expect(resultado).toBe(false);
+    expect(resultado2).toBe(false);
+  });
 
 });
