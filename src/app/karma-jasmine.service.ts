@@ -23,12 +23,8 @@ export class KarmaJasmineService {
     return a / b;
   }
   numeroPar(a: number): boolean {
-    if (a % 2 == 0) {
-      return true;
-    } else {
-      return false;
+    return a % 2 === 0;
     }
-  }
   palindromo(cadena: string): boolean {
     const cadSinEspacios = cadena.toLowerCase().replace(' ', '');
     const cadInversa = cadSinEspacios.split('').reverse().join('');
