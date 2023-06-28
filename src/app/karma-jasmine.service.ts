@@ -30,7 +30,8 @@ export class KarmaJasmineService {
   palindromo(cadena: string): boolean {
     const cadSinEspacios = cadena.toLowerCase().replace(' ', '');
     const cadInversa = cadSinEspacios.split('').reverse().join('');
-    return cadSinEspacios === cadInversa;  }
+    return cadSinEspacios === cadInversa;
+  }
 
   calcularFactorial(a: number): Number {
     var factorial = 1;
@@ -40,10 +41,30 @@ export class KarmaJasmineService {
     return factorial;
   }
 
+  obtenerMax(a: number, b: number): number {
+    return Math.max(a, b);
+  }
+
+  convertirAMayusculas(cadena: string): string {
+    return cadena.toUpperCase();
+  }
+
+  comprobarPrimo(a: number): boolean {
+    if (a <= 1) {
+      return false;
+    }
+    for (var i = 2; i * i <= a; i++) {
+      if (a % i === 0) {
+        return false;
+      } 
+    }
+        return true;
+      }
+    }
 
 
 
 
 
 
-}
+

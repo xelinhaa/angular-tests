@@ -96,7 +96,36 @@ describe('KarmaJasmineService', () => {
   it('calcular el factorial de un número', () => {
     const resultado = service.calcularFactorial(4);
     expect(resultado).toBe(24);
-  })
+    const resultado2 = service.calcularFactorial(5);
+    expect(resultado2).toBe(120);
+  });
 
+  it('comprobar el máximo de dos números', () => {
+    const resultado = service.obtenerMax(8, 25);
+    expect(resultado).toBe(25);
+    const resultado2 = service.obtenerMax(15, 3);
+    expect(resultado2).toBe(15);
+  });
+
+  it('comprobar si convierte a mayúsculas', () => {
+    const resultado = service.convertirAMayusculas('mi mamá me mima');
+    expect(resultado).toBe("MI MAMÁ ME MIMA");
+    const resultado2 = service.convertirAMayusculas('El patio de mi casa');
+    expect(resultado2).toBe('EL PATIO DE MI CASA');
+  });
+
+  it('comprobar si un número es Primo', () => {
+    const resultado = service.comprobarPrimo(7);
+    const resultado2 = service.comprobarPrimo(19);
+    expect(resultado).toBe(true);
+    expect(resultado2).toBe(true);
+  });
+
+  it('comprobar si un número no es primo', () => {
+    const resultado = service.comprobarPrimo(4);
+    const resultado2 = service.comprobarPrimo(15);
+    expect(resultado).toBe(false);
+    expect(resultado2).toBe(false);
+  })
 
 });
