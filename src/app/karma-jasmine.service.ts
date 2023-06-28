@@ -39,7 +39,17 @@ export class KarmaJasmineService {
     }
   }
 
-  
+  calcularFactorial(a: number): Number {
+    var factorial = 1;
+    for (var i = 2; i <= a; i++) {
+      factorial *= i;
+    }
+    return factorial;
+  }
+
+
+
+
 
 
 
