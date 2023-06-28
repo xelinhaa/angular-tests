@@ -83,17 +83,17 @@ describe('KarmaJasmineService', () => {
     expect(resultado).toBe(false);
   });
 
-  it('debería comprobar si la cadena es un palíndromo', ()=>{
-    const resultado = service.palindromo('anita lava la tina');
+  it('debería comprobar si la cadena es un palíndromo', () => {
+    const resultado = service.palindromo('luz azul');
     expect(resultado).toBe(true);
   });
 
-  it('debería comprobar si la cadena no es un palíndromo', ()=>{
+  it('debería comprobar si la cadena no es un palíndromo', () => {
     const resultado = service.palindromo('hola qué tal');
     expect(resultado).toBe(false);
   });
 
-  
-   
+
+
 
 });

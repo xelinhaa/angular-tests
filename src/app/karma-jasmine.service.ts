@@ -30,9 +30,9 @@ export class KarmaJasmineService {
     }
   }
   palindromo(cadena: string): boolean {
-    var cadSinEspacios = cadena.replace(' ', '');
-    var cadInversa = cadSinEspacios.split('').reverse().join('');
-    if (cadSinEspacios == cadInversa) {
+    const cadSinEspacios = cadena.toLowerCase().replace(' ', '');
+    const cadInversa = cadSinEspacios.split('').reverse().join('');
+    if (cadSinEspacios === cadInversa) {
       return true;
     } else {
       return false;
