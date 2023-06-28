@@ -22,18 +22,15 @@ export class KarmaJasmineService {
   dividir(a: number, b: number): number {
     return a / b;
   }
+
   numeroPar(a: number): boolean {
     return a % 2 === 0;
-    }
+  }
+
   palindromo(cadena: string): boolean {
     const cadSinEspacios = cadena.toLowerCase().replace(' ', '');
     const cadInversa = cadSinEspacios.split('').reverse().join('');
-    if (cadSinEspacios === cadInversa) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+    return cadSinEspacios === cadInversa;  }
 
   calcularFactorial(a: number): Number {
     var factorial = 1;

@@ -93,8 +93,8 @@ describe('KarmaJasmineService', () => {
     expect(resultado).toBe(false);
   });
 
-  it('calcular el factorial de un número', ()=>{
-    const resultado=service.calcularFactorial(4);
+  it('calcular el factorial de un número', () => {
+    const resultado = service.calcularFactorial(4);
     expect(resultado).toBe(24);
   })
 
