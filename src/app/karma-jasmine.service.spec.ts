@@ -73,4 +73,27 @@ describe('KarmaJasmineService', () => {
     expect(resultado).toBe(-5);
   });
 
+  it('debería comprobar si el número es par', () => {
+    const resultado = service.numeroPar(8);
+    expect(resultado).toBe(true);
+  });
+
+  it('debería comprobar si el número es impar', () => {
+    const resultado = service.numeroPar(5);
+    expect(resultado).toBe(false);
+  });
+
+  it('debería comprobar si la cadena es un palíndromo', ()=>{
+    const resultado = service.palindromo('anita lava la tina');
+    expect(resultado).toBe(true);
+  });
+
+  it('debería comprobar si la cadena no es un palíndromo', ()=>{
+    const resultado = service.palindromo('hola qué tal');
+    expect(resultado).toBe(false);
+  });
+
+  
+   
+
 });
