@@ -81,11 +81,10 @@ export class KarmaJasmineService {
     const promedio = suma / array.length;
     return promedio;
   }
-  /*
-  stringToChars(arrayStr: string[]): string[] {
-    const arrayChar = arrayStr.split(',')
-  return 
-  }*/
+
+  stringToChars(arrayStr: string): string[] {
+    return arrayStr.split('')
+  }
 
   sumaDigitos(a: number): number {
     let suma = 0;
@@ -96,6 +95,55 @@ export class KarmaJasmineService {
       suma += digito;
     }
     return suma;
+  }
+
+  esAnagrama(array1: string, array2: string): boolean {
+    if (array1.length !== array2.length) {
+      return false;
+    }
+    const caracteres1 = array1.split('').sort().join('');
+    const caracteres2 = array2.split('').sort().join('');
+    return caracteres1 === caracteres2;
+  }
+
+
+  calcularAreaP(apotema: number, longLado: number, numLados: number): number {
+    const perimetro = longLado * numLados;
+    return (perimetro * apotema) / 2;
+  }
+
+  /*
+  encontrarModa(array: number[]): number[] {
+    const frecuencia: { [a: number]: number } = {};
+    for (const num of array) {
+      if (frecuencia[num]) {
+        frecuencia[num]++;
+      } else {
+        frecuencia[num] = 1;
+      }
+    }
+    let moda: number[]=[];
+    let maxFrecuencia = 0;
+
+    for (const num in frecuencia) {
+      const frecuenciaActual = frecuencia[num];
+
+      if(frecuenciaActual > maxFrecuencia) {
+        moda = [Number(num)];
+        maxFrecuencia =frecuenciaActual;
+      } else if (frecuenciaActual === maxFrecuencia){
+        moda.push(Number(num));
+      }   
+  }
+  return moda;
+  */
+
+  //función reduce. a y b son los dos primeros numeros del array, 
+  //tras la suma de ambos, a pasa a ser el resultado de esa suma y
+  //se suma al siguiente número del array que pasa a ser b.
+  calcularMedia(arrayNum: number[]): number {
+    const suma = arrayNum.reduce((a, b) => a + b, 0);
+    return suma / arrayNum.length;
   }
 }
 

@@ -170,17 +170,32 @@ describe('KarmaJasmineService', () => {
     expect(resultado2).toBe(4);
   });
 
-  /*
-  it('comprueba si convierte un array de strings a caracteres', () => {
-    const resultado = service.stringToChars();
-    expect(resultado).toBe()
-  })
-  */
 
-  it('comprobar si calcula la suma de dígitos', () => {
-    const resultado = service.sumaDigitos(458);
-    expect(resultado).toBe(17);
-  })
+  it('comprueba si convierte un array de strings a caracteres', () => {
+    const resultado = service.stringToChars('hola');
+    expect(resultado).toEqual(['h', 'o', 'l', 'a']);
+  });
+
+  it('comprueba si calcula la suma de dígitos', () => {
+    expect(service.sumaDigitos(458)).toBe(17);
+  });
+
+  it('comprueba si la cadena es una nagrama de otra', () => {
+    expect(service.esAnagrama('alex', 'xela')).toEqual(true);
+    expect(service.esAnagrama('casa', 'puerta')).toEqual(false);
+  });
+
+  it('calcula el área de un polígono regular', () => {
+    expect(service.calcularAreaP(8, 10, 3)).toBe(120);
+    expect(service.calcularAreaP(5, 7, 4)).toBe(70);
+  });
+
+  it('calcula la media de un array de números', () => {
+    expect(service.calcularMedia([2,4,6,8,10])).toBe(6);
+    expect(service.calcularMedia([45,8,-74,-5,2])).toBe(-4.8);
+  });
+
+
 
 
 
