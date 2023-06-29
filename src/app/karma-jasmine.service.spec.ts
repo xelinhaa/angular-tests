@@ -180,7 +180,7 @@ describe('KarmaJasmineService', () => {
     expect(service.sumaDigitos(458)).toBe(17);
   });
 
-  it('comprueba si la cadena es una nagrama de otra', () => {
+  it('comprueba si la cadena es un anagrama de otra', () => {
     expect(service.esAnagrama('alex', 'xela')).toEqual(true);
     expect(service.esAnagrama('casa', 'puerta')).toEqual(false);
   });
